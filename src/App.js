@@ -11,11 +11,6 @@ import ContactPage from "./Pages/ContactPage";
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton } from "@material-ui/core";
-
-
-
-
-
 import { Route, Switch as Switching } from "react-router";
 import Switch from '@material-ui/core/Switch';
 
