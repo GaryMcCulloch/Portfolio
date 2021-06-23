@@ -114,14 +114,14 @@ const ContactPageStyled = styled.section`
                 input{
                     border: 1px solid var(--border-color);
                     outline: none;
-                    background: transparent;
+                    background: var(--background-dark-color);
                     height: 50px;
                     padding: 0 15px;
                     width: 100%;
                     color: inherit;
                 }
                 textarea{
-                    background-color: transparent;
+                    background-color: var(--background-dark-color);
                     border: 1px solid var(--border-color);
                     outline: none;
                     color: inherit;

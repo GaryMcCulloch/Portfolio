@@ -14,7 +14,7 @@ function ServiceCard({image, title, paragraph}) {
 }
 
 const ServiceCardStyled = styled.div`
-    background-color: var(--background-dark-color-2);
+    background-color: var(--background-dark-grey);
     border-left: 1px solid var(--border-color);
     border-right: 1px solid var(--border-color);
     border-bottom: 1px solid var(--border-color);

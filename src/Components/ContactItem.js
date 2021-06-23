@@ -18,7 +18,7 @@ function ContactItem({icon, title, contact1, contact2}) {
 
 const ContactItemStyled = styled.div`
     padding: 1.5rem 2rem;
-    background-color: var(--background-dark-color-2);
+    background-color: var(--background-dark-grey);
     display: flex; 
     margin: 8px;
     align-items: center;

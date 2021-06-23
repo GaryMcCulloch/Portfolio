@@ -37,6 +37,9 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --shadow-color: rgba(25,29,43,.05);
+    --shadow-color-2: rgba(0,123,255, .1);;
+    
 }
 .dark-theme{
     --primary-color: #007bff;
@@ -55,6 +58,8 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --shadow-color: rgba(25,29,43,.45);
+    --shadow-color-2: rgba(0,123,255, .1);
 }
 *{
     margin: 0;
@@ -135,7 +140,7 @@ h6{
   }
   //Nav Toggler
   .hamburger-menu{
-      position: absolute;
+      position: fixed;
       right: 5%;
       top: 3%; 
       display: none;
@@ -153,7 +158,7 @@ h6{
         display: block;
     }
   }
-//Global Media Queries
+
 `;
 
 export default GlobalStyle;

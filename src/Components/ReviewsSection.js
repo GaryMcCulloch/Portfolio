@@ -2,7 +2,7 @@ import React from 'react';
 import styled from'styled-components';
 import { InnerLayout } from '../styles/Layouts';
 import Title from './Title';
-import ReviewItem from '../Components/ReviewItem';
+import ReviewItem from './ReviewItem';
 
 function ReviewsSection() {
     return (
@@ -23,6 +23,7 @@ const ReviewsStyled = styled.div`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-gap: 1.5rem;
+        width: 100%;
         @media screen and (max-width: 650px) {
             grid-template-columns: repeat(1, 1fr);
             
