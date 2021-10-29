@@ -1,14 +1,36 @@
-import React from 'react';
+import {React, useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 import coder from '../img/coder.png';
+import Switch from '@material-ui/core/Switch';
+import Brightness4Icon from '@material-ui/icons/Brightness4';
+
 
 function Navigation() {
+
+    const [theme, setTheme] = useState('dark-theme');
+    const [checked, setChecked] = useState(false);
+
+    const themeToggler = () => {
+        if(theme === 'light-theme') {
+          setTheme('dark-theme');
+          setChecked(false);
+        } else {
+            setTheme('light-theme');
+            setChecked(true);
+        }
+      }
+
+      useEffect(()=> {
+        document.documentElement.className = theme;
+      }, [theme]);
+
     return (
         <NavigationStyled>
             <div className="avatar">
                 <img src={coder} alt="" />
             </div>
+
             <ul className="nav-items">
                 <li className="nav-item">
                     <NavLink to="/"  activeClassName="active-class" exact>Home</NavLink>
@@ -22,13 +44,29 @@ function Navigation() {
                 <li className="nav-item">
                     <NavLink to="/portfolio"  activeClassName="active-class" exact>Portfolio</NavLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                     <NavLink to="/blogs"  activeClassName="active-class" exact>Blogs</NavLink>
-                </li>
+                </li> */}
                 <li className="nav-item">
                     <NavLink to="/contact"  activeClassName="active-class" exact>Contact</NavLink>
                 </li>
             </ul>
+
+            <div className="light-dark-mode">
+                <div className="left-content">
+                    <Brightness4Icon />
+                </div>
+                <div className="right-content">
+                <Switch 
+                    value=""
+                    checked={checked}
+                    inputProps={{ 'aria-label': ''}}
+                    size="medium"
+                    onClick={themeToggler}
+                /> 
+                </div>
+            </div>
+            
             <footer className="footer">
                 <p>@2021 Gary McCulloch</p>
             </footer>

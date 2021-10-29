@@ -12,11 +12,9 @@ function HomePage() {
                 <Particle />
             </div>
             <div className="typography">
-                <h1>Hi, I'm <span>Gary McCulloch</span></h1>
+                <h1>I'm <span>Gary</span>.</h1>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Atque nihil voluptates ea dolore vel 
-                    repellat? Quia tenetur non quam exercitationem. Lorem ipsum dolor sit amet.
+                    An Independent Creative Developer from Glasgow, Scotland.
                 </p>
                 <div className='icons'>
                 <a href="https://codepen.io/pen/" className="icon d-facebook">
