@@ -42,6 +42,9 @@ const MenuItemStyled = styled.div`
         flex-direction: column;
         text-align: center;
         margin-bottom: 5rem;
+        background: rgba(25,29,43, 0.7);
+        padding: 1rem;
+        border-radius: 10px;
     }
 
     .image{

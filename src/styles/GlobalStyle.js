@@ -140,21 +140,21 @@ h6{
       position: fixed;
       right: 5%;
       top: 3%; 
-      display: none;
-      z-index: 15;
+      /* display: none; */
+      z-index: 30;
       svg{
           font-size: 3rem;
       }
     }
     .nav-toggle{
-        transform: translateX(0);
-        z-index: 20;
+        transform: translateX(-100%);
+        
     }
-  @media screen and (max-width:1200px){
+  /* @media screen and (max-width:1200px){
     .hamburger-menu{
         display: block;
-    }
-  }
+    } 
+  } */
 
 `;
 

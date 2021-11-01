@@ -7,11 +7,26 @@ import PrimaryButton from '../Components/PrimaryButton';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import emailjs from 'emailjs-com';
+
 
 function ContactPage() {
     const phone = <PhoneIcon />
     const email = <EmailIcon />
     const location = <LocationOnIcon />
+
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('default_service', 'template_b9oinhv', e.target, 'user_uEjlHzZukXjlinmvS5oAv')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    }
+
     return (
         <MainLayout>
             <Title title={'Contact'} span={'Contact'} />
@@ -21,7 +36,7 @@ function ContactPage() {
                         <div className="contact-title">
                             <h4>Get In Touch</h4>
                         </div>
-                        <form action="" className="form">
+                        <form action="" className="form" onSubmit={sendEmail}>
                             <div className="form-field">
                                 <label htmlFor="name">Name*</label>
                                 <input type="text" id={"name"} />
@@ -39,7 +54,8 @@ function ContactPage() {
                                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                             </div>
                             <div className="form-field f-button">
-                                <PrimaryButton title={'Send Email'}/>
+                                <input type="submit" value="Send Message" id="submitBtn"/>
+                              
                             </div>
                         </form>
                     </div>
@@ -133,8 +149,25 @@ const ContactPageStyled = styled.section`
             .f-button{
                 margin-bottom: 2rem;
             }
+            #submitBtn{
+                background-color: var(--primary-color);
+                padding: .8rem 2.5rem;
+                color: white;
+                cursor: pointer;
+                display: inline-block;
+                font-size: inherit;
+                text-transform: uppercase;
+                position: relative;
+                transition: all .4s ease-in-out;
+                
+            }
+            #submitBtn:hover{
+                    border: 1px solid white;
+                }
         }
     }
+
+
 `;
 
 export default ContactPage;

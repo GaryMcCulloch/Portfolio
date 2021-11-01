@@ -11,6 +11,7 @@ function Navigation() {
     const [theme, setTheme] = useState('dark-theme');
     const [checked, setChecked] = useState(false);
 
+
     const themeToggler = () => {
         if(theme === 'light-theme') {
           setTheme('dark-theme');
@@ -27,9 +28,9 @@ function Navigation() {
 
     return (
         <NavigationStyled>
-            <div className="avatar">
+            {/* <div className="avatar">
                 <img src={coder} alt="" />
-            </div>
+            </div> */}
 
             <ul className="nav-items">
                 <li className="nav-item">
@@ -67,23 +68,23 @@ function Navigation() {
                 </div>
             </div>
             
-            <footer className="footer">
+            {/* <footer className="footer">
                 <p>@2021 Gary McCulloch</p>
-            </footer>
+            </footer> */}
         </NavigationStyled>
     )
 }
 
 const NavigationStyled = styled.nav`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 100%;
     width: 100%;
-    border-right: 1px solid var(--border-color);
+    /* border-right: 1px solid var(--border-color); */
 
-    .avatar{
+    /* .avatar{
         width: 100%;
         border-bottom: 1px solid var(--border-color);
         text-align: center;
@@ -93,10 +94,11 @@ const NavigationStyled = styled.nav`
             border-radius: 50%;
             border: 8px solid var(--border-color);
         }
-    }
+    } */
     .nav-items{
         width: 100%;
         text-align: center;
+        margin-bottom: 4rem;
 
         .active-class{
             background-color: var(--primary-color);
@@ -112,6 +114,7 @@ const NavigationStyled = styled.nav`
                 text-transform: uppercase;
                 transition: all .4s ease-in-out;
                 font-weight: 600;
+                font-size: 2.5rem;
                 letter-spacing: 1px;
 
                 &:hover{
@@ -138,7 +141,7 @@ const NavigationStyled = styled.nav`
             }
         }
     }
-    footer{
+    /* footer{
         border-top: 1px solid var(--border-color);
         width: 100%;
         p{
@@ -147,7 +150,7 @@ const NavigationStyled = styled.nav`
             display: block;
             text-align: center;
         }
-    }
+    } */
 `;
 
 export default Navigation;

@@ -4,17 +4,21 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import GithubIcon from '@material-ui/icons/GitHub';
 import YoutubeIcon from '@material-ui/icons/YouTube';
 import Particle from '../Components/Particle';
+import AboutPage from './AboutPage';
+import PortfolioPage from './PortfolioPage';
+import ResumePage from './ResumePage';
+import ContactPage from './ContactPage';
 
 function HomePage() {
     return (
         <HomePageStyled>
-            <div className="particle-con">
+            {/* <div className="particle-con">
                 <Particle />
-            </div>
+            </div> */}
             <div className="typography">
                 <h1>I'm <span>Gary</span>.</h1>
                 <p>
-                    An Independent Creative Developer from Glasgow, Scotland.
+                    An Independent Full Stack Developer from Glasgow, Scotland.
                 </p>
                 <div className='icons'>
                 <a href="https://codepen.io/pen/" className="icon d-facebook">
@@ -28,6 +32,10 @@ function HomePage() {
                     </a>
                 </div>
             </div>
+            <AboutPage />
+            <PortfolioPage />
+            <ResumePage />
+            <ContactPage />
         </HomePageStyled>
     )
 }
@@ -35,7 +43,7 @@ function HomePage() {
 const HomePageStyled = styled.header`
     width: 100%;
     height: 100vh;
-    position: relative;
+    /* position: relative; */
     @media screen and (max-width: 502px){
         h1{
             font-size: 80%;
@@ -43,12 +51,19 @@ const HomePageStyled = styled.header`
     }
    
     .typography{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        width: 80%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 5rem;
+        h1{
+            font-size: 6rem;
+        }
+        span{
+            font-size: inherit;
+        }
         .icons{
             display: flex;
             justify-content: center;

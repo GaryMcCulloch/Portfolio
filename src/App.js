@@ -28,12 +28,12 @@ function App() {
       </div>
 
       <MainContentStyled>
-        <div className="lines">
+        {/* <div className="lines">
           <div className="line-1"></div>
           <div className="line-2"></div>
           <div className="line-3"></div>
           <div className="line-4"></div>
-        </div>
+        </div> */}
 
         <Switching>
           <Route exact path="/" >
@@ -62,14 +62,14 @@ function App() {
 }
 
 const MainContentStyled = styled.main`
-  position: relative;
-  margin-left: 16.3rem;
+  /* position: relative;
+  /* margin-left: 16.3rem; 
   min-height: 100vh;
   @media screen and (max-width: 1200px){
     margin-left: 0px;
-  }
+  } */
   
-  .lines{
+  /* .lines{
     position: absolute;
     min-height: 100%;
     width: 100%;
@@ -82,7 +82,7 @@ const MainContentStyled = styled.main`
       min-height: 100vh;
       background-color: var(--border-color);
     }
-  }
+  } */
 `;
 
 export default App;
