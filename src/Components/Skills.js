@@ -3,27 +3,24 @@ import styled from 'styled-components';
 import { InnerLayout } from '../styles/Layouts';
 import Title from './Title';
 import ProgressBar from './ProgressBar';
+import ServicesSection from '../Components/ServicesSection';
 
 function Skills() {
     return (
         <SkillsStyled>
             <Title title={'My Skills'} span={'My Skills'} />
+            <ServicesSection />
             <InnerLayout>
                 <div className="skills">
                     <ProgressBar 
-                        title={'HTML5'}
-                        width={'70%'}
-                        text={'70%'}
-                    />
-                    <ProgressBar 
-                        title={'CSS3'}
+                        title={'Front-end'}
                         width={'90%'}
                         text={'90%'}
                     />
                     <ProgressBar 
-                        title={'JAVASCRIPT'}
-                        width={'65%'}
-                        text={'65%'}
+                        title={'Back-end'}
+                        width={'75%'}
+                        text={'75%'}
                     />
                     <ProgressBar 
                         title={'REACT JS'}
@@ -31,19 +28,9 @@ function Skills() {
                         text={'90%'}
                     />
                     <ProgressBar 
-                        title={'PYTHON'}
-                        width={'70%'}
-                        text={'70%'}
-                    />
-                    <ProgressBar 
-                        title={'JAVA'}
-                        width={'55%'}
-                        text={'55'}
-                    />
-                    <ProgressBar 
-                        title={'C#'}
-                        width={'75%'}
-                        text={'75%'}
+                        title={'Design'}
+                        width={'60%'}
+                        text={'60%'}
                     />
                 </div>
             </InnerLayout>
@@ -54,7 +41,7 @@ function Skills() {
 const SkillsStyled = styled.section`
     .skills{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 2rem;
         grid-column-gap: 3rem;
         @media screen and (max-width: 700px){

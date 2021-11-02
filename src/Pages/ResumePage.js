@@ -8,7 +8,7 @@ function ResumePage() {
     return (
         <MainLayout>
             <Skills />
-            <Resume />
+            {/* <Resume /> */}
         </MainLayout>
     )
 }

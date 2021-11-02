@@ -40,7 +40,7 @@ function Navigation() {
                     <NavLink to="/about"  activeClassName="active-class" exact>About</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/resume"  activeClassName="active-class" exact>Resume</NavLink>
+                    <NavLink to="/resume"  activeClassName="active-class" exact>Skills & Experience</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/portfolio"  activeClassName="active-class" exact>Portfolio</NavLink>
