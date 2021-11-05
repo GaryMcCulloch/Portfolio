@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className="App">
-      <Sidebar navToggle={navToggle}/>
+      <Sidebar navToggle={navToggle} setNavToggle={setNavToggle}/>
 
       <div className="hamburger-menu">
         <IconButton onClick={() => setNavToggle(!navToggle)}>

@@ -6,11 +6,12 @@ import Switch from '@material-ui/core/Switch';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 
-function Navigation() {
+function Navigation({navToggle}) {
+    console.log(navToggle)
 
     const [theme, setTheme] = useState('dark-theme');
     const [checked, setChecked] = useState(false);
-
+    
 
     const themeToggler = () => {
         if(theme === 'light-theme') {
