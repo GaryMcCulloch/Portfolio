@@ -1,5 +1,4 @@
 import React from 'react';
-import { MainLayout, InnerLayout } from '../styles/Layouts';
 import styled from 'styled-components';
 import Title from '../Components/Title';
 import ContactItem from '../Components/ContactItem';
@@ -28,14 +27,11 @@ function ContactPage() {
     }
 
     return (
-        <MainLayout>
-            <Title title={'Contact'} span={'Contact'} />
-            <ContactPageStyled>
-                <InnerLayout className={'contact-section'}>
+            
+            <ContactPageStyled id="contact">
+                <Title title={'Contact'} span={'Contact'} />
+                <div className="contact-section">
                     <div className="left-content">
-                        <div className="contact-title">
-                            <h4>Get In Touch</h4>
-                        </div>
                         <form action="" className="form" onSubmit={sendEmail}>
                             <div className="form-field">
                                 <label htmlFor="name">Name*</label>
@@ -54,8 +50,7 @@ function ContactPage() {
                                 <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
                             </div>
                             <div className="form-field f-button">
-                                <input type="submit" value="Send Message" id="submitBtn"/>
-                              
+                                <input type="submit" value="Send Message" id="submitBtn"/>  
                             </div>
                         </form>
                     </div>
@@ -63,58 +58,46 @@ function ContactPage() {
                         <ContactItem 
                             icon={phone} 
                             title={'Phone'}
-                            contact1={'+77908020543'}
-                            contact2={'0141 427 3698'}
+                            contact1={'07908020544'}
                         />
                         <ContactItem 
                             icon={email} 
                             title={'Email'}
-                            contact1={'garymcculloch@gmail.com'}
-                            contact2={'info@gmail.com'}
+                            contact1={'garymcculloch1@gmail.com'}
                         />
                         <ContactItem 
                             icon={location} 
                             title={'Location'}
                             contact1={'Glasgow'}
-                            contact2={'Cambuslang'}
+                            contact2={'Scotland'}
                         />
                     </div>
-                </InnerLayout>
+                    </div>
             </ContactPageStyled>
-        </MainLayout>
     )
 }
 
-const ContactPageStyled = styled.section`   
+const ContactPageStyled = styled.section` 
+    padding: 3rem 5%;
+    .right-content{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
     .contact-section{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-column-gap: 2rem;
-        @media screen and (max-width: 978px) {
-            grid-template-columns: repeat(1, 1fr);
-            .f-button{
-                margin-bottom: 3rem;
-            }
-        }
-        .right-content{
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            @media screen and (max-width: 502px){
-                width: 70%;
-            }
-        }
+        padding: 3rem;
+        
         .contact-title{
             h4{
                 color: var(--white-color);
                 padding: 1rem 0;
-                font-size: 1.8rem;
             }
         }
         .form{
             width: 100%;
-            @media screen and (max-width: 502px){
-                width: 100%;
-            }
+            
             .form-field{
                 margin-top: 2rem;
                 position: relative;
@@ -166,7 +149,13 @@ const ContactPageStyled = styled.section`
                 }
         }
     }
-
+    @media screen and (min-width: 1000px){
+        .contact-section{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-column-gap: 2rem;
+        }    
+    }
 
 `;
 

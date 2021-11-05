@@ -5,7 +5,7 @@ function ServiceCard({image, title, paragraph}) {
     return (
         <ServiceCardStyled>
             <div className="container">
-                <img src={image} alt="hello" />
+                {/* <img src={image} alt="hello" /> */}
                 <h4>{title}</h4>
                 <p>{paragraph}</p>
             </div>
@@ -26,9 +26,9 @@ const ServiceCardStyled = styled.div`
     }
     .container{
         padding: 1.2rem;
+        min-height: 200px;
         h4{
             color: var(--white-color);
-            font-size: 1.6rem;
             padding: 1rem 0;
             position: relative;
             &::after{
@@ -45,9 +45,12 @@ const ServiceCardStyled = styled.div`
 
         p{
             padding: .8rem 0;
-
         }
     }
+    
+           
+        
+  
 `;
 
 export default ServiceCard

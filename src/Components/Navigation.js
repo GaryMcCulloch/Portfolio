@@ -20,7 +20,7 @@ function Navigation() {
             setTheme('light-theme');
             setChecked(true);
         }
-      }
+    }
 
       useEffect(()=> {
         document.documentElement.className = theme;
@@ -28,9 +28,6 @@ function Navigation() {
 
     return (
         <NavigationStyled>
-            {/* <div className="avatar">
-                <img src={coder} alt="" />
-            </div> */}
 
             <ul className="nav-items">
                 <li className="nav-item">
@@ -40,14 +37,11 @@ function Navigation() {
                     <NavLink to="/about"  activeClassName="active-class" exact>About</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/resume"  activeClassName="active-class" exact>Skills & Experience</NavLink>
+                    <NavLink to="/skillspage"  activeClassName="active-class" exact>Skills & Experience</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/portfolio"  activeClassName="active-class" exact>Portfolio</NavLink>
+                    <NavLink to="/projects"  activeClassName="active-class" exact>Portfolio</NavLink>
                 </li>
-                {/* <li className="nav-item">
-                    <NavLink to="/blogs"  activeClassName="active-class" exact>Blogs</NavLink>
-                </li> */}
                 <li className="nav-item">
                     <NavLink to="/contact"  activeClassName="active-class" exact>Contact</NavLink>
                 </li>
@@ -58,19 +52,15 @@ function Navigation() {
                     <Brightness4Icon />
                 </div>
                 <div className="right-content">
-                <Switch 
-                    value=""
-                    checked={checked}
-                    inputProps={{ 'aria-label': ''}}
-                    size="medium"
-                    onClick={themeToggler}
-                /> 
+                    <Switch 
+                        value=""
+                        checked={checked}
+                        inputProps={{ 'aria-label': ''}}
+                        size="medium"
+                        onClick={themeToggler}
+                    /> 
                 </div>
             </div>
-            
-            {/* <footer className="footer">
-                <p>@2021 Gary McCulloch</p>
-            </footer> */}
         </NavigationStyled>
     )
 }
@@ -82,19 +72,7 @@ const NavigationStyled = styled.nav`
     align-items: center;
     height: 100%;
     width: 100%;
-    /* border-right: 1px solid var(--border-color); */
-
-    /* .avatar{
-        width: 100%;
-        border-bottom: 1px solid var(--border-color);
-        text-align: center;
-        padding: 1rem 0;
-        img{
-            width: 70%;
-            border-radius: 50%;
-            border: 8px solid var(--border-color);
-        }
-    } */
+    
     .nav-items{
         width: 100%;
         text-align: center;
@@ -141,16 +119,17 @@ const NavigationStyled = styled.nav`
             }
         }
     }
-    /* footer{
-        border-top: 1px solid var(--border-color);
-        width: 100%;
-        p{
-            padding: 2rem 0;
-            font-size: 1.1rem;
-            display: block;
-            text-align: center;
+
+    @media screen and (max-width: 800px){
+        .nav-items li a{
+            font-size: 2rem;
         }
-    } */
+    }
+    @media screen and (max-width: 400px){
+        .nav-items li a{
+            font-size: 1.5rem;
+        }
+    }
 `;
 
 export default Navigation;

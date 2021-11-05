@@ -10,7 +10,9 @@ function Title({title, span}) {
 }
 
 const TitleStyled = styled.div`
-    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
     h2{
         color: var(--white-color);
         font-size: 3.8rem;
@@ -18,12 +20,15 @@ const TitleStyled = styled.div`
         text-transform: uppercase;
         position: relative;
         padding-bottom: .7rem;
-        @media screen and (max-width: 496px){
-                font-size: 2.8rem;
-        }
-        @media screen and (max-width: 370px){
+        @media screen and (max-width: 1000px){
+                font-size: 3rem;
+            }
+            @media screen and (max-width: 800px){
+                font-size: 2.2rem;
+            }
+            @media screen and (max-width: 500px){
                 font-size: 2rem;
-        }
+            }
         &::before{
             content: "";
             position: absolute;
@@ -44,6 +49,7 @@ const TitleStyled = styled.div`
             left: 0;
         }
         span{
+            display: none;
             font-weight: 900;
             color: var(--shadow-color);
             font-size: 5rem;
@@ -51,7 +57,7 @@ const TitleStyled = styled.div`
             top: 5%;
             left: 0;
             z-index: -1;
-            @media screen and (max-width: 620px){
+            @media screen and (max-width: 800px){
                 font-size: 4rem;
             }
             @media screen and (max-width: 496px){

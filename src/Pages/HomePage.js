@@ -5,18 +5,17 @@ import GithubIcon from '@material-ui/icons/GitHub';
 import YoutubeIcon from '@material-ui/icons/YouTube';
 import Particle from '../Components/Particle';
 import AboutPage from './AboutPage';
-import PortfolioPage from './PortfolioPage';
+import Projects from './Projects';
 import ResumePage from './ResumePage';
 import ContactPage from './ContactPage';
+import SkillsPage from './SkillsPage';
+import { Link } from 'react-router-dom';
 
 function HomePage() {
     return (
         <HomePageStyled>
-            {/* <div className="particle-con">
-                <Particle />
-            </div> */}
-            <div className="typography">
-                <h1>I'm <span>Gary</span>.</h1>
+            <div className="hero">
+                <h1>I'm <span className="accent">Gary</span>.</h1>
                 <p>
                     An Independent Full Stack Developer from Glasgow, Scotland.
                 </p>
@@ -30,11 +29,15 @@ function HomePage() {
                     <a href="https://codepen.io/pen/" className="icon d-youtube">
                         <YoutubeIcon />
                     </a>
+                    <div className="line"></div>
                 </div>
+                <Link to="projects">
+                <button className="btn">Projects</button>
+                </Link>
             </div>
             <AboutPage />
-            <PortfolioPage />
-            <ResumePage />
+            <SkillsPage />
+            <Projects />
             <ContactPage />
         </HomePageStyled>
     )
@@ -43,14 +46,9 @@ function HomePage() {
 const HomePageStyled = styled.header`
     width: 100%;
     height: 100vh;
-    /* position: relative; */
-    @media screen and (max-width: 502px){
-        h1{
-            font-size: 80%;
-        }
-    }
    
-    .typography{
+    .hero{
+        position: relative;
         width: 100%;
         height: 100vh;
         display: flex;
@@ -58,16 +56,23 @@ const HomePageStyled = styled.header`
         justify-content: center;
         flex-direction: column;
         font-size: 5rem;
-        h1{
-            font-size: 6rem;
-        }
-        span{
-            font-size: inherit;
-        }
+        text-align: center;
+        
         .icons{
+            position: fixed;
+            bottom: 0;
+            left: 1%;
             display: flex;
             justify-content: center;
-            margin-top: 1rem;
+            align-items: center;
+            flex-direction: column;
+            z-index: 50;
+            .line{
+                width: 3px;
+                height: 5rem;
+                background: #007bff;
+                margin-top: 10px;
+            }
             .icon{
                 border: 2px solid var(--border-color);
                 display: flex;
@@ -76,12 +81,10 @@ const HomePageStyled = styled.header`
                 border-radius: 50%;
                 transition: all .4s ease-in-out;
                 cursor: pointer;
+                margin-top: 10px;
                 &:hover{
                     border: 2px solid var(--primary-color);
                     color: var(--primary-color);
-                }
-                &:not(:last-child){
-                    margin-right: 1rem;
                 }
                 svg{
                     margin: .5rem;
@@ -98,6 +101,25 @@ const HomePageStyled = styled.header`
                     border: 2px solid #5F4687;
                     color: #5F4687;
                 }
+            }
+        }
+    }
+
+    .accent{
+        font-size: inherit;
+    }
+
+    @media screen and (max-width: 650px){
+        .hero{
+            h1{
+            font-size: 4rem;
+            }
+        }
+    }
+    @media screen and (max-width: 400px){
+        .hero{
+            .icons{
+                display: none;
             }
         }
     }

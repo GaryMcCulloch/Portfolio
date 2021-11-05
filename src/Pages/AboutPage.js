@@ -1,51 +1,65 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MainLayout } from '../styles/Layouts';
 import Title from '../Components/Title';
-import ImageSection from '../Components/ImageSection';
-import ServicesSection from '../Components/ServicesSection';
-import ReviewsSection from '../Components/ReviewsSection';
-import Technologies from "../Components/Technologies";
+import { Link } from 'react-router-dom';
 
 function AboutPage() {
     return (
-        // <MainLayout>
             <AboutStyled>
-            <Title title={'About Me'} span={'about me'}></Title>
-            <div className="images"></div>
-            <div className="container">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis praesentium ducimus voluptatem animi deleniti molestias ex. Quasi totam veniam unde nesciunt dolorum, inventore quam magni iure rem alias voluptatem quod?  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia sit nostrum inventore laborum explicabo fugiat fugit necessitatibus maiores? Ratione eum sapiente magnam voluptatem maiores rem, dignissimos eos nihil perferendis deleniti.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt velit delectus perferendis a praesentium suscipit impedit sed iste iusto, commodi ea illo porro nobis eligendi. Modi praesentium assumenda necessitatibus!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatibus odit sit recusandae omnis, quo, quod tempore harum error velit ipsam eaque corrupti quas amet totam aliquam placeat nulla voluptas.</p>
-            </div>
+                <Title title={'About Me'} span={'about me'}></Title>
+                <div className="about">
+                <p className="mobileVis ">I’m a Full Stack Developer with a strong passion for functionality, efficiency and that feeling when I finally solve a problem that I’ve been stuck on for what feels like an eternity.  I have been developing for 2 years now on various stacks and languages and produced a variety of works ranging from the good to the terrible.</p>
+                <p className="laptopVis">I have been working as a retail manager for 10 years and although I enjoyed this, I was fascinated with the idea of working with technology and decided that I it was worth the risk to pursue this fully and commit to the learning process.</p>
+
+                <p className="laptopVis">I am a relatively new Dad to my 3-year-old boy and a husband to his Mum.  When I am not developing, I can usually be found out at the climbing center, up the hills or heading for a swim with the family.li7t</p>
+                <Link to="contact">
+                    <button className="btn">Let's talk</button>
+                </Link>
+
+                <div className="imageContainer">
+
+                </div>
+            </div>  
             </AboutStyled>
-        // </MainLayout>
     )
 }
 
 const AboutStyled = styled.section`
-position: relative;
-height: 100vh;
-overflow: hidden;
-    .container{
-        margin-top: 5rem;
-        width: 40%;
-
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 3rem 5%;
+    overflow: hidden;
+    
+    .about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 3rem;
+        width: 100%;
         p{
             padding-bottom: 1.5rem
         }
     }
 
-    .images{
+    .imageContainer{
         position: absolute;
         width: 658.6px;
         height: 1409.55px;
-        right: 20%;
+        right: 10%;
         top: -25%;
-        border: 1px solid blue;
+        background: #0c335f;
+        opacity: 0.2;
         transform: rotate(25.83deg);
-        z-index: 50;
+        z-index: -10;
+    }
+
+    @media screen and (min-width: 1200px) {
+        .about{
+            width: 60%;
         }
+    }
 `;
 
 export default AboutPage

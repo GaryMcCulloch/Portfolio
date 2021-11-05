@@ -2,24 +2,7 @@ import {createGlobalStyle} from 'styled-components';
 
 
 const GlobalStyle = createGlobalStyle`
-/* :root{
-    --primary-color: #007bff;
-    --primary-color-light: #057FFF;
-    --secondary-color: #6c757d;
-    --background-dark-color: #10121A;
-    --background-dark-grey: #191D2B;
-    --border-color: #2e344e;
-    --background-light-color: #F1F1F1;
-    --background-light-color-2: rgba(3,127,255,.3);
-    --white-color: #FFF;
-    --font-light-color: #a4acc4;
-    --font-dark-color: #313131;
-    --font-dark-color-2: #151515;
-    --sidebar-dark-color: #191D2B;
-    --scrollbar-bg-color: #383838;
-    --scrollbar-thump-color: #6b6b6b;
-    --scrollbar-track-color: #383838;
-} */
+
 .light-theme{
     --primary-color: #007bff;
     --primary-color-light: #057FFF;
@@ -92,29 +75,82 @@ a{
     font-family: inherit;
     color: inherit;
     font-size: inherit;
-    font-size: 1rem;
 }
-h1{
-    font-size: 4rem;
-    color: var(--white-color);
-    span{
-        font-size: 4rem;
-        @media screen and (max-width: 502px){
-            font-size: 3rem
+
+.btn{
+            padding: .8rem 2rem;
+            margin-top: 3rem;
+            border: 2px solid #007bff;
+            background: transparent;
+            text-transform: uppercase;
+            color: #fff;
+            &:hover{
+                background: #007bff;
+                color: black;
+            }
         }
+
+h1{
+    font-size: 3rem;
+    color: var(--white-color);
+    @media screen and (min-width: 600px){
+        font-size: 4rem
     }
-    @media screen and (max-width: 502px){
-        font-size: 3rem
+    @media screen and (min-width: 800px){
+        font-size: 5rem
+    }
+    @media screen and (min-width: 1000px){
+        font-size: 6rem
+    }
+    @media screen and (min-width: 1200px){
+        font-size: rem
     }
 }
 span{
-    color: var(--primary-color);
+    color: var(--primary-color);  
+    font-size: inherit;  
 }
+
+h3{
+    font-size: 1.6rem;
+}
+
+h4{
+    font-size: 1.4rem;
+
+}
+
 h6{
     color: var(--white-color);
     font-size: 1.2rem;
-    padding-bottom: .6rem;
 }
+
+
+}
+
+
+
+
+p{
+    font-size: .9rem;  
+}
+
+@media screen and (min-width: 600px){
+    p{
+        font-size: 1rem;
+    }
+    h3{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+        .laptopVis{
+            display: none;
+        }
+    }
+
+
 //Utilities
 .u-margin-bottom{
     margin-bottom: 4rem;
@@ -140,7 +176,6 @@ h6{
       position: fixed;
       right: 5%;
       top: 3%; 
-      /* display: none; */
       z-index: 30;
       svg{
           font-size: 3rem;
@@ -150,11 +185,6 @@ h6{
         transform: translateX(-100%);
         
     }
-  /* @media screen and (max-width:1200px){
-    .hamburger-menu{
-        display: block;
-    } 
-  } */
 
 `;
 
