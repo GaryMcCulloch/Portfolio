@@ -11,11 +11,10 @@ function Skills() {
             <ServicesSection />
             <div className="skillsContainer">
                 <div className="skillsText">
-                    <p className="mobileText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis praesentium ducimus voluptatem animi deleniti molestias ex. Quasi totam veniam unde nesciunt dolorum, inventore quam magni iure rem alias voluptatem quod? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officia sit nostrum inventore laborum explicabo fugiat fugit necessitatibus maiores? Ratione eum sapiente magnam voluptatem maiores rem, dignissimos eos nihil perferendis deleniti.</p>
+                    <h4>Technology Experience</h4>
+                    <p className="mobileText">At the beginning of my development journey, I heavily focused on learning HTML5, CSS3 and JavaScript. The resources that I was using to learn all pointed towards gaining experience in the fundamental languages before progressing onto the vast options available.  Since that time, I have taken a Software Engineer course through Codecademy which covered the most popular technologies such as Java, PHP, C# and Python.  I have also gained experience with many different frameworks, libraries, development environments and databases.  </p>
                     <br/>
-                    <p className="laptopVis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis deserunt velit delectus perferendis a praesentium suscipit impedit sed iste iusto, commodi ea illo porro nobis eligendi. Modi praesentium assumenda necessitatibus!</p>
-                    <br/>
-                    <p className="laptopVis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptatibus odit sit recusandae omnis, quo, quod tempore harum error velit ipsam eaque corrupti quas amet totam aliquam placeat nulla voluptas.</p>
+                    <p className="laptopVis">With every project I undertake, my knowledge of the wider spectrum continues to be nurtured and I ensure this by researching concepts that I do not understand yet.</p>
                     </div>
                 <div className="skills">
                     <ProgressBar 
@@ -59,6 +58,11 @@ const SkillsStyled = styled.section`
         text-align: center; 
     }
 
+    h4{
+        margin-bottom: 20px;
+        color: white;
+    }
+
 
     .skills{
         margin-top: 2rem;
@@ -70,8 +74,16 @@ const SkillsStyled = styled.section`
         @media screen and (max-width: 700px){
             grid-template-columns: repeat(1, 1fr);
         }
-
     }
+    @media screen and (min-width: 1000px) {
+            .skillsContainer{
+                flex-direction: row;
+            }
+
+            .skillsText{
+                text-align: left;
+            }
+        }
 `;
 
 export default Skills

@@ -3,10 +3,8 @@ import styled from 'styled-components';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import GithubIcon from '@material-ui/icons/GitHub';
 import YoutubeIcon from '@material-ui/icons/YouTube';
-import Particle from '../Components/Particle';
 import AboutPage from './AboutPage';
 import Projects from './Projects';
-import ResumePage from './ResumePage';
 import ContactPage from './ContactPage';
 import SkillsPage from './SkillsPage';
 import { Link } from 'react-router-dom';
@@ -16,7 +14,7 @@ function HomePage() {
         <HomePageStyled>
             <div className="hero">
                 <h1>I'm <span className="accent">Gary</span>.</h1>
-                <p>
+                <p className="heroText">
                     An Independent Full Stack Developer from Glasgow, Scotland.
                 </p>
                 <div className='icons'>
@@ -122,7 +120,7 @@ const HomePageStyled = styled.header`
                 display: none;
             }
         }
-    }
+    } 
 `;
 
 export default HomePage;

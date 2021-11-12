@@ -1,14 +1,11 @@
 import {React, useState, useEffect} from 'react';
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
-import coder from '../img/coder.png';
 import Switch from '@material-ui/core/Switch';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 
 
 function Navigation({navToggle}) {
-    console.log(navToggle)
-
     const [theme, setTheme] = useState('dark-theme');
     const [checked, setChecked] = useState(false);
     
@@ -41,7 +38,7 @@ function Navigation({navToggle}) {
                     <NavLink to="/skillspage"  activeClassName="active-class" exact>Skills & Experience</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/projects"  activeClassName="active-class" exact>Portfolio</NavLink>
+                    <NavLink to="/projects"  activeClassName="active-class" exact>Projects</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/contact"  activeClassName="active-class" exact>Contact</NavLink>

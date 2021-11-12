@@ -3,8 +3,6 @@ import Sidebar from "./Components/Sidebar";
 import styled from "styled-components";
 import HomePage from "./Pages/HomePage";
 import AboutPage from "./Pages/AboutPage";
-import ResumePage from "./Pages/ResumePage";
-import PortfolioPage from "./Pages/PortfolioPage";
 import ContactPage from "./Pages/ContactPage";
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton } from "@material-ui/core";

@@ -1,12 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Title from './Title';
 import ServiceCard from '../Components/ServiceCard';
-import design from '../img/design.svg';
-import intelligence from '../img/intelligence.svg';
-import gamedev from '../img/game-dev.svg';
-import { LocalPharmacyRounded } from '@material-ui/icons';
-import java from "../img/java.png";
 
 function ServicesSection() {
     return (
@@ -15,18 +9,18 @@ function ServicesSection() {
                     <ServiceCard 
                         // image={design} 
                         title={'Full Stack Development'} 
-                        paragraph={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe a eaque dicta perspiciatis fugiat sequi unde laudantium.'} />
+                        paragraph={'I am passionate about working with all aspects of a project from its conception through to production. I am most comfortable with the MERN or MEAN stacks currently however, I have spent a lot of time working with the LAMP stack also. '} />
 
                     <div className="mid-card">
                         <ServiceCard 
                             // image={intelligence} 
                             title={'Problem Solving'} 
-                            paragraph={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe a eaque dicta perspiciatis fugiat sequi unde laudantium.'} />
+                            paragraph={'Encountering challenges and problems is an unavoidable part of the development process and one that I have learned to embrace effectively.  In my time in development I have found that the right information is always there… I just have to find it. '} />
                     </div>
                     <ServiceCard 
                         // image={gamedev} 
                         title={'Communication'} 
-                        paragraph={'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe a eaque dicta perspiciatis fugiat sequi unde laudantium.'} />
+                        paragraph={'A major factor in the success or failure of any development project is communication. Communication is essential for ensuring that a project is being pulled in the same direction by everyone involved and with the vision of the client.'} />
                 </div>
             </ServicesSectionStyled>
     )
