@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Title from '../Components/Title';
 import { Link } from 'react-router-dom';
-import test from '../img/test.jpg';
 
 function AboutPage() {
     return (
