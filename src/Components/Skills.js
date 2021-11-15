@@ -55,7 +55,6 @@ const SkillsStyled = styled.section`
 
     .skillsText{
         width: 100%;  
-        /* padding: 5vh; */
     }
 
 
@@ -77,6 +76,7 @@ const SkillsStyled = styled.section`
 
             .skillsText{
                 text-align: left;
+                padding-right: 5vh;
             }
         }
 `;
