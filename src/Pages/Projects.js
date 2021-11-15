@@ -83,10 +83,6 @@ function Projects() {
 const ProjectsStyled = styled.div`
     padding: 3rem 5%;
 
-    h3{
-        color: #fff;
-    } */
-
     .punk{
         color: #007bff;
     }

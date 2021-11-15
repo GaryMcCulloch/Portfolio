@@ -67,17 +67,17 @@ const SkillsPageStyled = styled.div`
         align-items: center;
         justify-content: center;
         border-radius: 10px;
-        background: #10121a;
-        box-shadow:  5px 5px 24px #0a0b10,
-             -5px -5px 24px #161924;
+        background: var(--tech-shadow);
+        box-shadow:  5px 5px 24px var(--tech-shadow2),
+             -5px -5px 24px var(--tech-shadow3);
         h5{
             font-size: 1.5rem;
         }
     }
 
     .techItem:hover{
-        box-shadow: inset 10px 10px 49px #06070a,
-            inset -10px -10px 49px #1a1d2a;
+        box-shadow: inset 10px 10px 49px var(--tech-shadow),
+            inset -10px -10px 49px var(--tech-shadow);
         h5{
             font-size: 1.4rem;
         }

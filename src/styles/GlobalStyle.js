@@ -21,7 +21,10 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
     --shadow-color: rgba(25,29,43,.05);
-    --shadow-color-2: rgba(0,123,255, .1);;
+    --shadow-color-2: rgba(0,123,255, .1);
+    --tech-shadow: #f1f1f1;
+    --tech-shadow2: #d2d2d2;
+    --tech-shadow3: #fff;
     
 }
 .dark-theme{
@@ -43,6 +46,9 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-track-color: #383838;
     --shadow-color: rgba(25,29,43,.45);
     --shadow-color-2: rgba(0,123,255, .1);
+    --tech-shadow: #10121a;
+    --tech-shadow2: #0a0b10;
+    --tech-shadow3: #161924;
 }
 *{
     margin: 0;
@@ -80,10 +86,10 @@ a{
 .btn{
             padding: .8rem 2rem;
             margin-top: 3rem;
-            border: 2px solid #007bff;
+            border: 2px solid var(--primary-color);
             background: transparent;
             text-transform: uppercase;
-            color: #fff;
+            color: var(--white-color);
             &:hover{
                 background: #007bff;
                 color: black;
@@ -113,6 +119,7 @@ span{
 
 h3{
     font-size: 1.6rem;
+    color: var(--white-color);
 }
 
 h4{
