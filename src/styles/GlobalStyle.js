@@ -85,7 +85,7 @@ a{
 
 .btn{
             padding: .8rem 2rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
             border: 2px solid var(--primary-color);
             background: transparent;
             text-transform: uppercase;
@@ -109,7 +109,7 @@ h1{
         font-size: 6rem
     }
     @media screen and (min-width: 1200px){
-        font-size: rem
+        font-size: 7rem
     }
 }
 span{
@@ -123,8 +123,9 @@ h3{
 }
 
 h4{
+    padding-bottom: 20px;
     font-size: 1.4rem;
-
+    color: var(--white-color);
 }
 
 h6{
@@ -140,6 +141,7 @@ h6{
 
 p{
     font-size: .9rem;  
+    padding-bottom: 1rem;
 }
 
 @media screen and (min-width: 600px){

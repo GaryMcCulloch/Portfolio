@@ -54,7 +54,7 @@ const SkillsPageStyled = styled.div`
     padding: 3rem 5%;
 
     .techContainer{
-        margin-top: 5rem;
+        margin-top: 3rem;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-gap: 1.5rem;

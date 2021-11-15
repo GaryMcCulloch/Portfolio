@@ -12,7 +12,8 @@ function Skills() {
             <div className="skillsContainer">
                 <div className="skillsText">
                     <h4>Technology Experience</h4>
-                    <p className="mobileText">At the beginning of my development journey, I heavily focused on learning HTML5, CSS3 and JavaScript. The resources that I was using to learn all pointed towards gaining experience in the fundamental languages before progressing onto the vast options available.  Since that time, I have taken a Software Engineer course through Codecademy which covered the most popular technologies such as Java, PHP, C# and Python.  I have also gained experience with many different frameworks, libraries, development environments and databases.  </p>
+                    <p className="mobileText">At the beginning of my development journey, I heavily focused on learning HTML5, CSS3 and JavaScript. The resources that I was using to learn all pointed towards gaining experience in the fundamental languages before progressing onto the vast options available.</p>
+                    <p className="mobileText">Since that time, I have taken a Software Engineer course through Codecademy which covered the most popular technologies such as Java, PHP, C# and Python.  I have also gained experience with many different frameworks, libraries, development environments and databases.</p>
                     <br/>
                     <p className="laptopVis">With every project I undertake, my knowledge of the wider spectrum continues to be nurtured and I ensure this by researching concepts that I do not understand yet.</p>
                     </div>
@@ -54,13 +55,7 @@ const SkillsStyled = styled.section`
 
     .skillsText{
         width: 100%;  
-        padding: 5vh;
-        text-align: center; 
-    }
-
-    h4{
-        margin-bottom: 20px;
-        color: white;
+        /* padding: 5vh; */
     }
 
 

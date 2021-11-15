@@ -86,7 +86,7 @@ const ContactPageStyled = styled.section`
     }
 
     .contact-section{
-        padding: 3rem;
+        /* padding: 3rem; */
         
         .contact-title{
             h4{
